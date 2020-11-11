@@ -57,6 +57,4 @@ app.put("/update", async (req, res) => {
   }
 })
 
-app.listen(3001, () => {
-  console.log('server is running...');
-})
+app.listen(process.env.port || 3001)
