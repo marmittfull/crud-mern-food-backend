@@ -7,7 +7,7 @@ const FoodModel = require('./models/Food')
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect("mongodb+srv://admin:admin123@cluster0.yjoks.mongodb.net/food?retryWrites=true&w=majority", {
   useNewUrlParser: true,
 })
 
@@ -57,4 +57,4 @@ app.put("/update", async (req, res) => {
   }
 })
 
-app.listen(process.env.port || 3001)
+app.listen(3001)
