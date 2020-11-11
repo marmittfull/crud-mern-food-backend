@@ -7,7 +7,7 @@ const FoodModel = require('./models/Food')
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://admin:admin123@cluster0.yjoks.mongodb.net/food?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
 })
 
